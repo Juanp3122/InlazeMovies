@@ -13,7 +13,6 @@ export class AuthController {
 
     @Post('register')
     registerUser(@Body() userObject: RegisterAuthDto) {
-        console.log("🚀 ~ AuthController ~ registerUser ~ userObject:", userObject)
         return this.authService.register(userObject)
     }
 
