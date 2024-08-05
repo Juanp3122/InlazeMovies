@@ -12,7 +12,7 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot({
       isGlobal: true, 
     }),
-    MongooseModule.forRoot('mongodb+srv://juanp31223122:YQogtWMtHNqZ4QgZ@cluster0.5yqfeba.mongodb.net/inlazemovies?retryWrites=true&w=majority&appName=Cluster0'),
+    MongooseModule.forRoot(process.env.MonogURL),
     UserModule,
     AuthModule,
     TheMoviesDbModule,
